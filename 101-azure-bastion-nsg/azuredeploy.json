@@ -93,12 +93,27 @@
                             "sourcePortRange": "*",
                             "sourceAddressPrefix": "GatewayManager",
                             "destinationPortRanges": [
-                                "443",
-                                "4443"
+                                "443"
                             ],
                             "destinationAddressPrefix": "*",
                             "access": "Allow",
                             "priority": 120,
+                            "direction": "Inbound"
+                        }
+                    },
+                    {
+                        "name": "bastion-in-host",
+                        "properties": {
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRanges": [
+                                "8080",
+                                "5701"
+                            ],
+                            "sourceAddressPrefix": "VirtualNetwork",
+                            "destinationAddressPrefix": "VirtualNetwork",
+                            "access": "Allow",
+                            "priority": 130,
                             "direction": "Inbound"
                         }
                     },
@@ -141,6 +156,22 @@
                             "destinationAddressPrefix": "AzureCloud",
                             "access": "Allow",
                             "priority": 120,
+                            "direction": "Outbound"
+                        }
+                    },
+                    {
+                        "name": "bastion-out-host",
+                        "properties": {
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRanges": [
+                                "8080",
+                                "5701"
+                            ],
+                            "sourceAddressPrefix": "VirtualNetwork",
+                            "destinationAddressPrefix": "VirtualNetwork",
+                            "access": "Allow",
+                            "priority": 130,
                             "direction": "Outbound"
                         }
                     }
