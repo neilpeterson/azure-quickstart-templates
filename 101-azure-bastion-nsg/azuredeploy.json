@@ -99,22 +99,22 @@
                             "direction": "Inbound"
                         }
                     },
-                    {
-                        "name": "bastion-in-host",
-                        "properties": {
-                            "protocol": "*",
-                            "sourcePortRange": "*",
-                            "destinationPortRanges": [
-                                "8080",
-                                "5701"
-                            ],
-                            "sourceAddressPrefix": "VirtualNetwork",
-                            "destinationAddressPrefix": "VirtualNetwork",
-                            "access": "Allow",
-                            "priority": 130,
-                            "direction": "Inbound"
-                        }
-                    },
+                    // {
+                    //     "name": "bastion-in-host",
+                    //     "properties": {
+                    //         "protocol": "*",
+                    //         "sourcePortRange": "*",
+                    //         "destinationPortRanges": [
+                    //             "8080",
+                    //             "5701"
+                    //         ],
+                    //         "sourceAddressPrefix": "VirtualNetwork",
+                    //         "destinationAddressPrefix": "VirtualNetwork",
+                    //         "access": "Allow",
+                    //         "priority": 130,
+                    //         "direction": "Inbound"
+                    //     }
+                    // },
                     {
                         "name": "bastion-in-deny",
                         "properties": {
@@ -156,23 +156,23 @@
                             "priority": 120,
                             "direction": "Outbound"
                         }
-                    },
-                    {
-                        "name": "bastion-out-host",
-                        "properties": {
-                            "protocol": "*",
-                            "sourcePortRange": "*",
-                            "destinationPortRanges": [
-                                "8080",
-                                "5701"
-                            ],
-                            "sourceAddressPrefix": "VirtualNetwork",
-                            "destinationAddressPrefix": "VirtualNetwork",
-                            "access": "Allow",
-                            "priority": 130,
-                            "direction": "Outbound"
-                        }
                     }
+                    // {
+                    //     "name": "bastion-out-host",
+                    //     "properties": {
+                    //         "protocol": "*",
+                    //         "sourcePortRange": "*",
+                    //         "destinationPortRanges": [
+                    //             "8080",
+                    //             "5701"
+                    //         ],
+                    //         "sourceAddressPrefix": "VirtualNetwork",
+                    //         "destinationAddressPrefix": "VirtualNetwork",
+                    //         "access": "Allow",
+                    //         "priority": 130,
+                    //         "direction": "Outbound"
+                    //     }
+                    // }
                 ]
             }
         },
